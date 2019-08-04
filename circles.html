@@ -6,9 +6,11 @@
     <link rel="stylesheet" type="text/css" href="circles.css">
 
     <script type="text/paperscript" canvas="myCanvas">
-    	for(var x = 0; x < 1000; x+= 100) {
-        var circle2 = new Path.Circle(new Point(x, 0), 10);
-        circle2.fillColor = 'purple';
+      function onKeyDown(event) {
+        var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+      	new Path.Circle(point, 10).fillColor = 'orange';
       }
     </script>
   </head>
